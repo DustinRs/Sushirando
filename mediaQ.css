@@ -1,0 +1,370 @@
+@media (max-width: 1920px) {
+  .basket {
+    right: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .nav {
+    width: 440px;
+  }
+
+  .divMaps {
+    margin-left: 100px;
+  }
+
+  .mealtable {
+    width: 65%;
+  }
+
+  .divBasket {
+    width: 500px;
+  }
+
+  .basket {
+    width: 500px;
+    min-height: 60vh;
+    max-height: 90vh;
+  }
+
+  .basketMeals {
+    min-height: 10vh;
+    max-height: 60vh;
+  }
+
+  .subTotal {
+    padding: 0px;
+  }
+
+  .p1 {
+    margin-right: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .p2 {
+    margin-right: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .overViewBasket {
+    flex-wrap: wrap;
+    align-content: center;
+    max-height: 40vh;
+  }
+
+  .overViewDiv {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .basketOverviewItems {
+    padding: 16px;
+  }
+
+  .h4overView {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    display: none;
+  }
+
+  .inputHeader {
+    margin-right: 240px;
+  }
+
+  .mealtable {
+    width: 61%;
+  }
+
+  .divBasket {
+    width: 500px;
+  }
+
+  .basket {
+    width: 500px;
+    min-height: 58vh;
+    max-height: 90vh;
+  }
+
+  .basketMeals {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    min-height: 10vh;
+    max-height: 60vh;
+  }
+
+  .h4 {
+    padding: 0px;
+  }
+
+  .divMaps {
+    margin-left: 40px;
+    width: 688px;
+  }
+
+  .Maps {
+    width: 688px;
+  }
+
+
+}
+
+
+
+@media (min-width: 1281px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mealtable {
+    width: 55%;
+  }
+
+  .divBasket {
+    width: 453px;
+  }
+
+  .basket {
+    width: 453px;
+    min-height: 50vh;
+    max-height: 90vh;
+  }
+
+  .basketMeals {
+    min-height: 10vh;
+    max-height: 60vh;
+  }
+
+  .inputHeader {
+    margin-right: 0;
+    width: 400px;
+    padding: 16px;
+
+  }
+
+  .divMaps {
+    width: 474px;
+  }
+
+  .Maps {
+    width: 474px;
+  }
+
+  .searchbar {
+    padding: 18px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .price {
+    padding-right: 8px;
+  }
+}
+
+@media (min-width: 421px) {
+  .mobileBasketButton {
+    display: none;
+  }
+}
+
+
+@media (max-width: 920px) {
+  .inputHeader {
+    display: none;
+  }
+
+  .headerlogo {
+    font-size: 12px;
+  }
+
+  .logoimg {
+    width: 64px;
+  }
+
+  .divMaps {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Maps {
+    width: 100%;
+  }
+
+  .restaurant {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .divBasket {
+    width: 0;
+  }
+
+  .basket {
+    left: 100%;
+    width: 100%;
+    min-height: 55vh;
+    max-height: 90vh;
+    z-index: 9;
+    transition: 0.4s;
+  }
+
+  .mealtable {
+    width: 100%;
+  }
+
+  footer {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .divFooter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 165px;
+  }
+
+  .searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .menu {
+    padding: 20px;
+  }
+
+  .restauranticons {
+    width: 30px;
+    height: 30px;
+  }
+
+  .overViewButton {
+    width: 14%;
+  }
+
+  .mobileBasketButton {
+    position: fixed;
+    top: 110px;
+    right: 20px;
+    width: 58px;
+    height: 58px;
+    background-color: #FF7F01;
+    z-index: 99;
+    border: unset;
+    border-radius: 29px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .mobileBasketButton:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  .mobile-carticon {
+    width: 36px;
+    height: 36px;
+  }
+  .h4 {
+    padding: 6px;
+}
+.counterCartButton {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  font-family: 'Playpen Sans', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  top: -26px;
+  right: 0;
+  padding: 1px;
+}
+}
+
+@media (max-width: 420px) {
+  
+  .basketLines {
+    width: 340px;
+  }
+
+
+  .Maps {
+    
+    height: 240px;
+  }
+  .basketItems {
+    font-size: 14px;
+  }
+  
+  .subTotal {
+    font-size: 14px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .p1 {
+    font-size: 16px;
+  }
+  .basketOverviewItems {
+    padding: 4px;
+  }
+  .overViewBasket {
+    flex-wrap: nowrap;
+    width: 400px;
+    max-height: 50vh;
+  }
+  .basket {
+    min-height: 62vh;
+  }
+  .basketButtons {
+    width: 20px;
+    height: 20px;
+  }
+  .basketicons {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .restaurantimg {
+    margin-left: 24px;
+  }
+
+  .restauranticons {
+    width: 30px;
+    height: 30px;
+  }
+  .basketLines {
+    width: 280px;
+  }
+}

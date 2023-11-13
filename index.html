@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushirando</title>
+    <link rel="icon" type="image/png" href="./img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="mediaQ.css">
+    <script src="script.js"></script>
+    
+</head>
+<body onload="renderMealList()">
+    <header class="header">
+        <div class="headerlogo">
+        <a href="#"><img class="logoimg" src="./img/logo.png" alt=""></a>
+        <h1>Sushirando</h1></div>
+        <div>
+        <input class="inputHeader" type="text" placeholder="Straße, Hausnummer, PLZ und Ort eingeben...">
+        <img src="" alt=""></div>
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+        <nav class="nav">
+            <a href="#allMeals" class="navLinks" id="">Gerichte</a>
+            <a href="#Map" class="navLinks" id="">Liefergebiet</a>
+            <a href="./templates/kontakt.html" target="_blank" class="navLinks" id="">Kontakt</a>
+            <a href="#social" class="navLinks" id="">Social Media</a>
+        </nav>
+
+
+        <nav class="mobile-nav">
+            <a href="#allMeals" class="menulinks" id="">Gerichte</a>
+            <a href="#Map" class="menulinks" id="">Liefergebiet</a>
+            <a href="./templates/kontakt.html" target="_blank" class="menulinks" id="">Kontakt</a>
+            <a href="#social" class="menulinks" id="">Social Media</a>
+        </nav>
+    
+        
+    </header>
+    <section class="orderSection">
+        <button onclick="openBasketMobile()" class="mobileBasketButton"><img class="mobile-carticon" src="./img/cartwhite.png" alt=""><p id="counterCart" class="counterCartButton"></p></button>
+        <div id="orderOverview" class="orderOverview d-none">
+
+            <div class="overViewDiv">
+                <div class="h4overView"><h4>Bestellübersicht</h4></div>
+                <div class="h4overView"><p class="pOverview">Vielen Dank für deine Bestellung!<br>Sie wird in ca. 30 Minuten geliefert!</p></div>
+                <div class="overViewBasket" id="overViewBasket"></div>
+                <div  class="h4overView SubFinalOverview"><h4 class="p1">Preis inklusive 1€ Lieferkosten:</h4><p id="subFinalOverview"></p><p>€</p></div>
+                <div class="h4overView"><button class="overViewButton" onclick="closeOverview()">Zurück zur Startseite</button></div>
+            </div>
+
+        </div>
+        <div class="mealtable" id="mealtable">
+            <img class="labelimg" id="Label" src="./img/label.jpg" alt="">
+            <div id="allMeals" class="restaurant">
+                <div class="SushiKingdom"><h2>SushiKingdom</h2>
+                <img class="stars" src="./img/stars.png" alt=""></div>
+                <div><img class="restaurantimg" src="./img/restaurant.png" alt=""></div>
+                <div><a href="./templates/Restaurant.html" target="_blank"><img class="restauranticons" src="./img/i.png" alt=""></a>
+                <img  class="restauranticons" src="./img/heart.png" onclick="swapHeart()" id="heartClick" alt=""></div>
+            </div>
+            <div class="searchbar">
+                <img class="searchicon" src="./img/search.png" alt="">
+                <a class="searchLinks" href="#Maki Sake">Maki</a>
+                <a class="searchLinks" href="#Nigiri Sake">Nigiri</a>
+                <a class="searchLinks" href="#Sake Philadelphia">Inside Out</a>
+                <a class="searchLinks" href="#Ebi Tempura">Tempura Rolls</a>
+                <a class="searchLinks" href="#Frühlingsrolle">Frühlingsrollen</a>
+                <a class="searchLinks" href="#Eis">Eis</a>
+            </div>
+            <div class="menu" id="menu">
+                <h3 >Beliebte Gerichte</h1>
+                <div class="meals" id="meals">
+                
+                </div>
+                
+
+            </div>
+        </div>
+        <div class="divBasket">
+         <div class="basket" id="basket">
+            <div class="h4"><h4>Warenkorb</h4></div>
+            <div class="basketMeals" id="basketMeals"> 
+                
+            </div>
+            <div class="basketLines"></div>
+            <div class="subTotal" >
+            <div class="subFinal"><p class="p1">Zwischensumme:<p class="p2" id="subtotal"></p><p class="p2">€</p></p></div>
+            <div class="subFinal"><p class="p1">Lieferkosten:<p class="p2">1,00€</p></p></div>
+            <div class="subFinal"><p class="p1">Gesamt:<p class="p2" id="subFinal"></p><p class="p2">€</p></p></div>
+            </div>
+            <div class="basketLines"></div>
+            <div class="minPrice">Mindestbestellwert: 10,00€</div>
+            <div class="basketButton">
+            <button onclick="order()" class="orderButton" id="orderButton"><img class="carticon" src="./img/cart.png" alt="">Bestellen</button>
+            </div>
+            
+            
+         </div>
+         
+        </div>
+    </section>
+    <div class="divMaps">
+        <h4 class="h4" id="Map">Liefergebiet</h4>
+            <iframe class="Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7367.845155593593!2d7.0047162546361275!3d49.23988012741058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1699357951941!5m2!1sde!2sde"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    <footer>
+        <div class="divFooter">
+        <div><a href="#Label"><img class="footerLogo" src="./img/logo.png" alt=""></a></div>
+        
+        <div id="contact" class="footerLinks">
+            <a class="quickLinks" href="./templates/kontakt.html" target="_blank">Kontakt</a>
+            <a class="quickLinks" href="./templates/datenschutz.html" target="_blank">Datenschutz</a>
+            <a class="quickLinks" href="./templates/impressum.html" target="_blank">Impressum</a>
+            
+        </div>
+        <div id="social">
+        <a href="https://www.facebook.com/lieferando" target="_blank"><img class="footerIcons" src="./img/facebook.png" alt=""></a>
+        <a href="https://www.instagram.com/lieferando/" target="_blank"><img class="footerIcons" src="./img/instagram.png" alt=""></a>
+        </div>
+        </div>
+        <div class="pFooter">
+        <img class="copyImg" src="./img/copyright.png" alt="">
+        <p >Dustin Rohrschneider</p>
+        </div>
+    </footer>
+</body>
+</html>

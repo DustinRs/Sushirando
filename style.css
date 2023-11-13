@@ -1,0 +1,606 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Playpen Sans', cursive;
+    max-width: 1920px;
+}
+
+header {
+    background-color: #FF7F01;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -2px 0px 6px 0px #FF7F01;
+    position: fixed;
+    width: 100%;
+    max-width: 1920px;
+    z-index: 999;
+    height: 90px;
+}
+
+.headerlogo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logoimg {
+    width: 100px;
+}
+
+.inputHeader {
+    border: #FF7F01;
+    background-color: #FF7F01;
+    color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px;
+    text-underline-offset: 4px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.inputHeader::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.inputHeader:focus {
+    border-color: #FF7F01;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 90px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navLinks:hover {
+    background-color: #F8F5F2;
+    color: #FF7F01;
+    font-weight: bold;
+    border: 1px solid #F8F5F2;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 24px;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    width: 100%;
+    max-width: 1920px;
+    min-height: 19vh;
+    display: block;
+    z-index: 10;
+    background-color: #FF7F01;
+    padding-top: 32px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    margin-bottom: 16px;
+    width: fit-content;
+    padding: 6px 6px;
+    color: white;
+    background-color: #FF7F01;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: #9e4f00;
+    color: white;
+    text-decoration: none;
+}
+
+.orderOverview {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 1920px;
+    height: 100vh;
+    z-index: 999;
+}
+
+.d-none {
+    display: none;
+}
+
+.overViewDiv {
+    background-color: lightgray;
+    width: 720px;
+    min-height: 10vh;
+    max-height: 90vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overViewBasket {
+    width: 500px;
+    min-height: 10vh;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketOverviewItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.h4overView {
+    background-color: #1573F4;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    width: -webkit-fill-available;
+    font-size: 20px;
+}
+
+.SubFinalOverview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overViewButton {
+    width: 40%;
+    height: 50px;
+    background-color: #1573F4;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 20px;
+}
+
+.overViewButton:hover {
+    cursor: pointer;
+}
+
+.orderSection {
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    width: 100%;
+}
+
+.mealtable {
+    position: relative;
+    left: 0px;
+    width: 70%;
+}
+
+.labelimg {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.restaurant {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.restaurantimg {
+    background-color: white;
+    width: 100px;
+}
+
+.restauranticons {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.restauranticons:hover {
+    cursor: pointer;
+}
+
+.SushiKingdom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stars {
+    width: 100px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.searchbar {
+    background-color: #F8F5F2;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.searchicon {
+    width: 40px;
+}
+
+.searchLinks {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.searchLinks:hover {
+    text-decoration: none;
+    color: #FF7F01;
+
+}
+
+.menu {
+    padding: 40px;
+
+}
+
+.meals {
+    border: 1px solid #F8F5F2;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mealsborder {
+    border: 1px solid #F8F5F2;
+    padding: 8px;
+}
+
+.price {
+    padding-right: 80px;
+    font-weight: bold;
+}
+
+.mealstop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plusButton {
+    background-color: white;
+    color: #1573F4;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #F8F5F2;
+}
+
+.plusButton:hover {
+    cursor: pointer;
+}
+
+.textPrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    background-color: #F8F5F2;
+    margin: 0;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 24px;
+}
+
+.divBasket {
+    display: flex;
+    flex-direction: column;
+    width: 576px;
+}
+
+.basket {
+    width: 576px;
+    min-height: 74vh;
+    max-height: 80vh;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 90px;
+}
+
+.basket.is-active {
+    left: 0;
+    display: flex;
+}
+
+.h4 {
+    background-color: #1573F4;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    width: -webkit-fill-available;
+    font-size: 20px;
+
+}
+
+.basketMeals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: 32vh;
+    max-height: 40vh;
+    width: 100%;
+    gap: 12px;
+
+}
+
+.basketItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.basketLines {
+    height: 1px;
+    width: 380px;
+    background-color: #F8F5F2;
+    padding: 2px;
+    gap: 10px;
+
+}
+
+.basketicons {
+    width: 20px;
+}
+
+.basketicons:hover {
+    cursor: pointer;
+}
+
+.basketButtons {
+    width: 24px;
+    height: 24px;
+    background-color: #1573F4;
+    border-radius: 8px;
+    border: unset;
+    color: white;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.basketButtons:hover {
+    cursor: pointer;
+}
+
+.subTotal {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.subFinal {
+    display: flex;
+
+}
+
+.p1 {
+    margin-right: 12px;
+}
+
+.minPrice {
+    padding: 20px;
+
+}
+
+.basketButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #1573F4;
+    position: absolute;
+    bottom: 0;
+}
+
+.orderButton {
+    background-color: #1573F4;
+    color: white;
+    border-style: none;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 16px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+.orderButton:hover {
+    cursor: pointer;
+}
+
+.carticon {
+    width: 24px;
+    padding-right: 8px;
+    margin: 0;
+}
+
+footer {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    margin-top: 160px;
+}
+
+.divFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerLogo {
+    width: 64px;
+}
+
+.footerLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+}
+
+.quickLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.quickLinks:hover {
+    text-decoration: underline;
+    color: #FF7F01;
+}
+
+.footerIcons {
+    width: 36px;
+    padding-left: 6px;
+}
+
+.footerIcons:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.copyImg {
+    width: 16px;
+    height: 16px;
+    padding-right: 8px;
+}
+
+.pFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.divMaps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+    width: 720px;
+    max-height: 600px;
+    box-shadow: -2px 0px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.Maps {
+    width: 720px;
+    height: 400px;
+}
+
+.dblock {
+    display: block;
+}
